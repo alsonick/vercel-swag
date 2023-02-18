@@ -23,7 +23,7 @@ const Home: NextPage = () => {
       </nav>
       <header className="flex flex-col justify-center items-center text-center pt-20">
         <h1 className="font-black text-6xl tracking-tighter max-w-[50rem]">
-          Submit a pr with some of pics of your vercel swag! ▲
+          Submit a pr with some of your vercel swag pictures! ▲
         </h1>
         <p className="text-gray-500 text-2xl mt-2 font-medium">
           Click{" "}
