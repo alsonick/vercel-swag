@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           Click{" "}
           <Link
             className="font-bold text-pink-500 hover:underline"
-            href=""
+            href="https://github.com/alsonick/vercel-swag/blob/main/CONTRIBUTING.md"
             target="_blank"
           >
             here
