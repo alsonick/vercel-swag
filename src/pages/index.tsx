@@ -34,10 +34,13 @@ const Home: NextPage = () => {
           >
             here
           </Link>{" "}
-          to add your photos.
+          to add your photos to the collection.
         </p>
       </header>
-      <div className="columns-1 md:columns-2 lg:columns-4 gap-10 space-y-4 mt-20">
+      <span className="mt-20 text-gray-500 ml-auto mb-5 font-medium">
+        {data.length} vercel swaggers 😎
+      </span>
+      <div className="columns-1 md:columns-2 lg:columns-4 gap-10 space-y-4 ">
         {data.map((d) => (
           <div className="overflow-hidden" key={d.twitter_handle}>
             <picture className="h-min w-full">
