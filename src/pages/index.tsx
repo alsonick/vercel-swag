@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col mx-auto max-w-8xl text-white pt-16 px-20">
+    <div className="flex flex-col mx-auto max-w-8xl h-screen text-white pt-16 px-20">
       <Head>
         <title>Vercel Swag</title>
       </Head>
@@ -37,24 +37,24 @@ const Home: NextPage = () => {
           to add your photos.
         </p>
       </header>
-      <div className="columns-1 gap-20 space-y-4 p-5 md:columns-2 lg:columns-3 mt-20">
+      <div className="columns-4 gap-8 space-y-4 p-5 md:columns-2 lg:columns-4 mt-20">
         {data.map((d) => (
-          <div className="flex flex-col" key={d.twitter_handle}>
-            <picture>
+          <div className="object-cover" key={d.twitter_handle}>
+            <picture className="h-min w-full">
               <img
-                className="rounded-3xl opacity-50 h-min hover:opacity-100 duration-300"
+                className="rounded-3xl opacity-50 hover:opacity-100 duration-300"
                 src={`/pictures/@${d.twitter_handle}-vercel-swag-${d.pic_index}.${d.file_ext}`}
                 alt="Vercel Swag"
               />
-              <Link
-                className="text-left flex items-center font-bold mt-4 hover:underline hover:opacity-70 duration-300"
-                href={`https://twitter.com/${d.twitter_handle}`}
-                title={`Follow @${d.twitter_handle} on Twitter.`}
-                target="_blank"
-              >
-                <FaTwitter className="mr-1 text-lg" />@{d.twitter_handle}
-              </Link>
             </picture>
+            <Link
+              className="text-left flex items-center font-bold mt-4 hover:underline hover:opacity-70 duration-300"
+              href={`https://twitter.com/${d.twitter_handle}`}
+              title={`Follow @${d.twitter_handle} on Twitter.`}
+              target="_blank"
+            >
+              <FaTwitter className="mr-1 text-lg" />@{d.twitter_handle}
+            </Link>
           </div>
         ))}
       </div>
