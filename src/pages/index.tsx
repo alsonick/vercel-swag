@@ -1,9 +1,9 @@
+import { FaTwitter, FaGithub } from "react-icons/fa";
+import data from "../data/swag.json";
+import Script from "next/script";
 import { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import data from "../data/swag.json";
-import { FaTwitter, FaGithub } from "react-icons/fa";
-import Script from "next/script";
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +13,11 @@ const Home: NextPage = () => {
       </Head>
       <Script async defer src="https://buttons.github.io/buttons.js" />
       <nav className="flex items-center h-12 w-full">
-        <Link className="ml-auto" href="" target="_blank">
+        <Link
+          className="ml-auto"
+          href="https://github.com/alsonick/vercel-swag"
+          target="_blank"
+        >
           <FaGithub className="text-4xl duration-300 hover:opacity-60" />
         </Link>
       </nav>
@@ -36,21 +40,21 @@ const Home: NextPage = () => {
       <div className="columns-1 gap-20 space-y-4 p-5 md:columns-2 lg:columns-3 mt-20">
         {data.map((d) => (
           <div className="flex flex-col" key={d.twitter_handle}>
-            <picture >
-            <img
-              className="rounded-3xl opacity-50 h-min hover:opacity-100 duration-300"
-              src={`/pictures/@${d.twitter_handle}-vercel-swag-${d.pic_index}.${d.file_ext}`}
-              alt="Vercel Swag"
-            />
-            <Link
-              className="text-left flex items-center font-bold mt-4 hover:underline hover:opacity-70 duration-300"
-              href={`https://twitter.com/${d.twitter_handle}`}
-              title={`Follow @${d.twitter_handle} on Twitter.`}
-              target="_blank"
-            >
-              <FaTwitter className="mr-1 text-lg" />@{d.twitter_handle}
-            </Link>
-          </picture>
+            <picture>
+              <img
+                className="rounded-3xl opacity-50 h-min hover:opacity-100 duration-300"
+                src={`/pictures/@${d.twitter_handle}-vercel-swag-${d.pic_index}.${d.file_ext}`}
+                alt="Vercel Swag"
+              />
+              <Link
+                className="text-left flex items-center font-bold mt-4 hover:underline hover:opacity-70 duration-300"
+                href={`https://twitter.com/${d.twitter_handle}`}
+                title={`Follow @${d.twitter_handle} on Twitter.`}
+                target="_blank"
+              >
+                <FaTwitter className="mr-1 text-lg" />@{d.twitter_handle}
+              </Link>
+            </picture>
           </div>
         ))}
       </div>
@@ -67,7 +71,7 @@ const Home: NextPage = () => {
           <br />&{" "}
           <Link
             className="font-bold text-gray-400 hover:underline"
-            href=""
+            href="https://github.com/alsonick/vercel-swag/graphs/contributors"
             target="_blank"
           >
             Contributors
