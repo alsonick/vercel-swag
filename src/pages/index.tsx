@@ -6,6 +6,12 @@ import Head from "next/head";
 import Link from "next/link";
 
 const Home: NextPage = () => {
+  function removeDuplicates() {
+    let twitterUsernames: string[] = [];
+    data.forEach((d) => twitterUsernames.push(d.twitter_handle));
+    return [...new Set(twitterUsernames)];
+  }
+
   return (
     <div className="flex flex-col mx-auto max-w-8xl h-screen text-white pt-16 lg:px-20 px-10">
       <Head>
@@ -23,7 +29,7 @@ const Home: NextPage = () => {
       </nav>
       <header className="flex flex-col justify-center items-center text-center pt-20">
         <h1 className="font-black text-6xl tracking-tighter max-w-[50rem]">
-          Submit a pr with some of your vercel swag pictures! ▲
+          Submit a pr with some of your vercel swag pictures!
         </h1>
         <p className="text-gray-500 text-2xl mt-2 font-medium">
           Click{" "}
@@ -38,14 +44,15 @@ const Home: NextPage = () => {
         </p>
       </header>
       <span className="mt-20 text-gray-500 ml-auto mb-5 font-medium">
-        {data.length} vercel swaggers 😎
+        <b className="text-gray-400">{removeDuplicates().length}</b> vercel
+        swaggers 😎
       </span>
       <div className="columns-1 md:columns-2 lg:columns-4 gap-10 space-y-4 ">
         {data.map((d) => (
           <div className="overflow-hidden" key={d.twitter_handle}>
             <picture className="h-min w-full">
               <img
-                className="rounded-3xl opacity-50 hover:opacity-100 duration-300"
+                className="rounded opacity-50 hover:opacity-100 duration-300 hover:scale-105"
                 src={`/pictures/@${d.twitter_handle}-vercel-swag-${d.pic_index}.${d.file_ext}`}
                 alt="Vercel Swag"
               />
