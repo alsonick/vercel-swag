@@ -12,10 +12,20 @@ const Home: NextPage = () => {
     return [...new Set(twitterUsernames)];
   }
 
+  const title = "Vercel Swag";
+  const description = "A collection of vercel swag.";
+
   return (
     <div className="flex flex-col mx-auto max-w-8xl h-screen text-white pt-16 lg:px-20 px-10">
       <Head>
-        <title>Vercel Swag</title>
+        <title>{title}</title>
+        <meta name="twitter:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta name="twitter:description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content="website" />
+        <meta name="description" content={description} key="desc" />
+        <meta property="og:url" content="https://vercel-swag.vercel.app/" />
       </Head>
       <Script async defer src="https://buttons.github.io/buttons.js" />
       <nav className="flex items-center h-12 w-full">
