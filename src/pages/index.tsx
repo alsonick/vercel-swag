@@ -12,7 +12,7 @@ const Home: NextPage = () => {
     return [...new Set(twitterUsernames)];
   };
 
-  const title = 'Vercel Swag';
+  const title = 'Vercel Swag Collection';
   const description = 'A collection of vercel swag.';
 
   return (
