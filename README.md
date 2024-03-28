@@ -1,38 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Contributing to vercel-swag
 
-## Getting Started
+Add your vercel swag to the collection.
 
-First, run the development server:
+## Steps to follow
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+### 1. Fork the repository
+
+Click the fork button on the top right.
+
+<img width="552" alt="Screenshot 2023-02-18 at 16 40 11" src="https://user-images.githubusercontent.com/101022772/219877481-f949dca8-75a6-4ab3-b0aa-e6cbc1522c0e.png">
+
+### 2. Clone the forked version
+
+Click the green button and copy the url.
+
+<img width="483" alt="Screenshot 2023-02-18 at 16 41 11" src="https://user-images.githubusercontent.com/101022772/219877527-26c535a8-5b98-4ff0-ad5a-f262b58b0940.png">
+
+Go to your terminal, clone the repository and navigate to it.
+
+```sh
+git clone https://github.com/alsonick/vercel-swag.git
+cd vercel-swag
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+After that open the project in your editor of choice.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 3. Add your vercel swag pics
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Inside the repository, save your pictures inside the `public/pictures` directory.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+#### Naming convention
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+`TWITTER_HANDLE`: Your Twitter handle.
 
-## Learn More
+`INDEX`: If you're uploading multiple pictures then please prefix the posistion, so your third picture will have a prefix of 3 and your second one will have a prefix of 2.
 
-To learn more about Next.js, take a look at the following resources:
+`@[TWITTER_HANDLE]-vercel-swag-[INDEX].jpeg`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### File data
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+After that navigate to the `swag.json` file inside the `data` directory and add a new object at the end of the array, include the `twitter_handle`, `file_ext` & `pic_index` properties.
 
-## Deploy on Vercel
+<img width="246" alt="Screenshot 2023-02-18 at 17 04 49" src="https://user-images.githubusercontent.com/101022772/219878647-bed816f1-dc36-4bb2-ae24-881873bc4e5b.png">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 4. Submit your pr
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+After you've done the following steps, commit your changes and open a pr. 🎉 
