@@ -88,39 +88,6 @@ const Home: NextPage = () => {
           </div>
         ))}
       </div>
-      <footer className="mt-20 pb-5 text-center">
-        <p className="text-gray-500 mb-5 font-medium">
-          Made with ❤️ by{' '}
-          <Link
-            className="font-bold text-gray-400 hover:underline"
-            href="https://github.com/alsonick"
-            target="_blank"
-          >
-            Nicholas
-          </Link>{' '}
-          <br />&{' '}
-          <Link
-            className="font-bold text-gray-400 hover:underline"
-            href="https://github.com/alsonick/vercel-swag/graphs/contributors"
-            target="_blank"
-          >
-            Contributors
-          </Link>
-          .
-        </p>
-        <a
-          className="github-button"
-          href="https://github.com/alsonick"
-          target="_blank"
-          data-size="large"
-          data-show-count="true"
-          data-color-scheme="no-preference: dark; light: dark; dark: dark;"
-          rel="noreferrer"
-          aria-label="Follow @alsonick on GitHub"
-        >
-          Follow @alsonick
-        </a>
-      </footer>
     </div>
   );
 };
